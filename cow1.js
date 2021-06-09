@@ -1,7 +1,7 @@
 const getInfo = async () => {
   try {
     let temp = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_1/temperatura/values/?token=BBFF-RBfZh7cXN3iTho9Eq0GWvG2Rx3s1VV`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_1/temperatura/values/?token=BBFF-U7Hv1EIpwgcFeIKNbZlcwhLxAGqcn7`,
       {
         method: 'GET',
         mode: 'cors',
@@ -11,7 +11,7 @@ const getInfo = async () => {
       }
     )
     let humd = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_1/humedad/values/?token=BBFF-RBfZh7cXN3iTho9Eq0GWvG2Rx3s1VV`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_1/humedad/values/?token=BBFF-U7Hv1EIpwgcFeIKNbZlcwhLxAGqcn7`,
       {
         method: 'GET',
         mode: 'cors',
@@ -21,7 +21,7 @@ const getInfo = async () => {
       }
     )
     let lat = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_1/lat/values/?token=BBFF-RBfZh7cXN3iTho9Eq0GWvG2Rx3s1VV`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_1/lat/values/?token=BBFF-U7Hv1EIpwgcFeIKNbZlcwhLxAGqcn7`,
       {
         method: 'GET',
         mode: 'cors',
@@ -31,7 +31,7 @@ const getInfo = async () => {
       }
     )
     let long = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_1/long/values/?token=BBFF-RBfZh7cXN3iTho9Eq0GWvG2Rx3s1VV`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_1/long/values/?token=BBFF-U7Hv1EIpwgcFeIKNbZlcwhLxAGqcn7`,
       {
         method: 'GET',
         mode: 'cors',
@@ -41,7 +41,7 @@ const getInfo = async () => {
       }
     )
     let alertTemp = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_1/temp-alert/values/?token=BBFF-RBfZh7cXN3iTho9Eq0GWvG2Rx3s1VV`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_1/temp-alert/values/?token=BBFF-U7Hv1EIpwgcFeIKNbZlcwhLxAGqcn7`,
       {
         method: 'GET',
         mode: 'cors',
@@ -51,7 +51,7 @@ const getInfo = async () => {
       }
     )
     let alertHum = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_1/hum-alert/values/?token=BBFF-RBfZh7cXN3iTho9Eq0GWvG2Rx3s1VV`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_1/hum-alert/values/?token=BBFF-U7Hv1EIpwgcFeIKNbZlcwhLxAGqcn7`,
       {
         method: 'GET',
         mode: 'cors',
@@ -80,7 +80,7 @@ const getInfo = async () => {
 		<div class="cow-state"> <h2>Estado de tu vaca:</h2>
 		<p> Temperatura
 		 ${
-       alertTempjson.results[0].value === 0
+       alertTempjson.results || alertTempjson.results[0].value === 0
          ? '<span>Tu vaca tiene un buena temperatura 🌡🐮</span>'
          : '<span>tu vaca tiene una temperatura muy alta podria tener fiebre 🔥💊</span>'
      }

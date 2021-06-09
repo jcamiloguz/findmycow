@@ -1,7 +1,7 @@
 const getInfo = async () => {
   try {
     let temp = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_3/temperatura/values/?token=BBFF-bwX0eW0lfiFrfsZ9TU649hS8dAF7zy`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_3/temperatura/values/?token=BBFF-ngUHogSDVUHQBEYMYYVXCHbcIslfrs`,
       {
         method: 'GET',
         mode: 'cors',
@@ -11,7 +11,7 @@ const getInfo = async () => {
       }
     )
     let humd = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_3/humedad/values/?token=BBFF-bwX0eW0lfiFrfsZ9TU649hS8dAF7zy`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_3/humedad/values/?token=BBFF-ngUHogSDVUHQBEYMYYVXCHbcIslfrs`,
       {
         method: 'GET',
         mode: 'cors',
@@ -21,7 +21,7 @@ const getInfo = async () => {
       }
     )
     let lat = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_3/lat/values/?token=BBFF-bwX0eW0lfiFrfsZ9TU649hS8dAF7zy`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_3/lat/values/?token=BBFF-ngUHogSDVUHQBEYMYYVXCHbcIslfrs`,
       {
         method: 'GET',
         mode: 'cors',
@@ -31,7 +31,7 @@ const getInfo = async () => {
       }
     )
     let long = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_3/long/values/?token=BBFF-bwX0eW0lfiFrfsZ9TU649hS8dAF7zy`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_3/long/values/?token=BBFF-ngUHogSDVUHQBEYMYYVXCHbcIslfrs`,
       {
         method: 'GET',
         mode: 'cors',
@@ -41,7 +41,7 @@ const getInfo = async () => {
       }
     )
     let alertTemp = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_3/temp-alert/values/?token=BBFF-bwX0eW0lfiFrfsZ9TU649hS8dAF7zy`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_3/temp-alert/values/?token=BBFF-ngUHogSDVUHQBEYMYYVXCHbcIslfrs`,
       {
         method: 'GET',
         mode: 'cors',
@@ -51,7 +51,7 @@ const getInfo = async () => {
       }
     )
     let alertHum = await fetch(
-      `https://things.ubidots.com/api/v1.6/devices/cowid_3/hum-alert/values/?token=BBFF-bwX0eW0lfiFrfsZ9TU649hS8dAF7zy`,
+      `https://things.ubidots.com/api/v1.6/devices/cowid_3/hum-alert/values/?token=BBFF-ngUHogSDVUHQBEYMYYVXCHbcIslfrs`,
       {
         method: 'GET',
         mode: 'cors',
